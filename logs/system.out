@@ -1,0 +1,6 @@
+Listening for transport dt_socket at address: 8000
+18:33:10,776 INFO  ~ Starting /home/lkq/sources/sina-analyse
+18:33:12,336 WARN  ~ You're running Play! in DEV mode
+18:33:12,589 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+18:33:22,625 INFO  ~ Connected to jdbc:mysql://localhost:3306/sina_analyse
+18:33:24,575 INFO  ~ Application 'sina_analyse' is now started !
