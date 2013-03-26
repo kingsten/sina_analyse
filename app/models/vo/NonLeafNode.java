@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class NonLeafNode extends TreeNode {
 
-    private int B = 5;
+    private int B = 10;     //非叶子节点的孩子数
     private ArrayList<TreeNode> childrenList;
 
     public NonLeafNode() {

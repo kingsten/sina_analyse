@@ -22,6 +22,7 @@ public class ImportDataService extends Thread {
 
         BufferedReader reader = null;
         try {
+            int number = 0;
             reader = new BufferedReader(new FileReader(originalDataFile));
             String tempString = null;
             List<SinaOriginal> sinaOriginalList = new ArrayList<SinaOriginal>();
@@ -40,6 +41,10 @@ public class ImportDataService extends Thread {
                 sinaOriginal.setContent(items[5]);
                 MongoDbUtil.getDatastore().save(sinaOriginal);
                 System.out.println("saved=================");
+                number++;
+                if (number > 10000) {
+                    break;
+                }
 
             }
         } catch (Exception e) {

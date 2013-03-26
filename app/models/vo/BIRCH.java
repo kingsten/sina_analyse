@@ -50,7 +50,8 @@ public class BIRCH {
                     data[0] = sinaOriginal.getPoiData();
                     data[1] = sinaOriginal.getLongitude();
                     data[2] = sinaOriginal.getLatitude();
-                    String mark = point_num + "";
+//                    String mark = point_num + "";
+                    String mark = sinaOriginal.get_id().toString();
 
                     //根据一个point instance创建一个MinCluster
                     ClusterFeature clusterFeature = new ClusterFeature(data, sinaOriginal.getContent());
@@ -98,14 +99,15 @@ public class BIRCH {
                 printTree(child);
             }
         } else {
-            System.out.println("\n一个叶子节点:");
+//            System.out.println("\n一个叶子节点:");
             LeafNode leaf = (LeafNode) root;
-            for (MinCluster cluster : leaf.getChildrenList()) {
-                System.out.println("\n一个最小簇:");
-                for (String mark : cluster.getInst_marks()) {
-                    System.out.print(mark + "\t");
-                }
-            }
+//            for (MinCluster cluster : leaf.getChildrenList()) {
+//                System.out.println("\n一个最小簇:");
+//                for (String mark : cluster.getInst_marks()) {
+//                    System.out.print(mark + "\t");
+//                }
+//            }
+            printLeaf(leaf);
         }
     }
 

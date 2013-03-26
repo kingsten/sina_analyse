@@ -13,8 +13,8 @@ import java.util.Date;
 @Entity(value = "sina_original", noClassnameStored = true)
 public class SinaOriginal {
 
-//    @Id
-//    private ObjectId id;
+    @Id
+    private ObjectId id;
 
     private Date machineTime;
 
@@ -40,14 +40,14 @@ public class SinaOriginal {
         Integer poiNumber = CommonUtil.getNumberOfChar(poi);
         poiData = Math.sqrt(poiNumber);
     }
-//
-//    public ObjectId get_id() {
-//        return id;
-//    }
-//
-//    public void set_id(ObjectId _id) {
-//        this.id = _id;
-//    }
+
+    public ObjectId get_id() {
+        return id;
+    }
+
+    public void setId(ObjectId _id) {
+        this.id = _id;
+    }
 
     public Date getMachineTime() {
         return machineTime;
