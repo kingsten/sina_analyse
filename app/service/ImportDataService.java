@@ -40,7 +40,6 @@ public class ImportDataService extends Thread {
                 sinaOriginal.setLatitude(Double.parseDouble(items[4]));
                 sinaOriginal.setContent(items[5]);
                 MongoDbUtil.getDatastore().save(sinaOriginal);
-                System.out.println("saved=================");
                 number++;
                 if (number > 10000) {
                     break;
@@ -57,6 +56,19 @@ public class ImportDataService extends Thread {
                     System.out.println(e.getMessage());
                 }
             }
+        }
+    }
+
+    public static void initPoI() {
+        try{
+            File file = new File("");
+
+           BufferedReader bufferedReader = null;
+
+
+
+        }   catch (Exception e){
+            logger.error(e.getMessage());
         }
     }
 

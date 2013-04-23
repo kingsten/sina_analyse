@@ -72,6 +72,7 @@ public class BIRCH {
         } catch (Exception e) {
             Logger logger = Logger.getLogger(BIRCH.class);
             logger.error(e.getMessage(), e);
+            System.out.println("error==============>" + e.getMessage());
 
         }
         return root;

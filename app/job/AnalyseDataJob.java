@@ -17,6 +17,7 @@ public class AnalyseDataJob extends Job {
     public void doJob() {
         BIRCH birch = new BIRCH();
         TreeNode root = birch.buildBTree();
-        birch.storeTree(root);
+//        birch.storeTree(root);
+        birch.printTree(root);
     }
 }
