@@ -2,6 +2,8 @@ package models.vo;
 
 import com.google.code.morphia.Datastore;
 import com.mongodb.MongoURI;
+import models.SinaInterimCluster;
+import models.SinaInterimLeafNode;
 import models.SinaOriginal;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -44,7 +46,6 @@ public class BIRCH {
                 for (SinaOriginal sinaOriginal : sinaOriginalList) {
                     //读入point instance
                     point_num++;
-                    System.out.println("point===>" + point_num);
 
                     double[] data = new double[CommonConstance.pointsNum];
                     data[0] = sinaOriginal.getPoiData();
@@ -99,19 +100,53 @@ public class BIRCH {
                 printTree(child);
             }
         } else {
-//            System.out.println("\n一个叶子节点:");
+            System.out.println("\n一个叶子节点:");
             LeafNode leaf = (LeafNode) root;
+            for (MinCluster cluster : leaf.getChildrenList()) {
+                System.out.println("\n一个最小簇:");
+                for (String mark : cluster.getInst_marks()) {
+                    System.out.print(mark + "\t");
+                }
+            }
+        }
+    }
+
+
+    public void storeTree(TreeNode root) {
+        if (!root.getClass().getName().equals("models.vo.LeafNode")) {
+            System.out.println(root.getClass().getName());
+            NonLeafNode nonLeaf = (NonLeafNode) root;
+            System.out.println("size===============>" + nonLeaf.getChildrenList().size());
+            for (TreeNode child : nonLeaf.getChildrenList()) {
+                storeTree(child);
+            }
+        } else {
+//            System.out.println("\n一个叶子节点:");
+//            LeafNode leaf = (LeafNode) root;
 //            for (MinCluster cluster : leaf.getChildrenList()) {
 //                System.out.println("\n一个最小簇:");
 //                for (String mark : cluster.getInst_marks()) {
 //                    System.out.print(mark + "\t");
 //                }
 //            }
-            printLeaf(leaf);
+            //存储一个簇的内容，加上一个节点进行标记
+            LeafNode leafNode = (LeafNode) root;
+            SinaInterimLeafNode sinaInterimLeafNode = new SinaInterimLeafNode();
+            for (MinCluster cluster : leafNode.getChildrenList()) {
+                SinaInterimCluster sinaInterimCluster = new SinaInterimCluster();
+                sinaInterimCluster.setLeafNodeId(sinaInterimLeafNode.getLeafNodeId());
+                sinaInterimCluster.setClusterSize(cluster.getInst_marks().size());
+                sinaInterimCluster.setOriginalDataIdList(cluster.getInst_marks());
+                MongoDbUtil.getDatastore().save(sinaInterimCluster);
+                System.out.println("id============>" + sinaInterimCluster.getClusterId().toString());
+                sinaInterimLeafNode.getClusterIdList().add(sinaInterimCluster.getClusterId().toString());
+            }
+            System.out.println("size of clust===================>" + sinaInterimLeafNode.getClusterIdList().size());
+            MongoDbUtil.getDatastore().save(sinaInterimLeafNode);
         }
     }
 
-//    public List<String> getTreeNodeId(TreeNode root){
+//    public List<String> gpaodingetTreeNodeId(TreeNode root){
 //        if(!root.getClass().getName().equals("birch.LeafNode")){
 //            NonLeafNode nonLeaf=(NonLeafNode)root;
 //            for(TreeNode child:nonLeaf.getChildrenList()){
