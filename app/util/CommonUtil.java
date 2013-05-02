@@ -77,6 +77,53 @@ public class CommonUtil {
         }
     }
 
+    public static Double getSimilarity(Map<Integer, Integer> wordMap_1, Map<Integer, Integer> wordMap_2) {
+        Map<Integer, int[]> vectorSpace = new HashMap<Integer, int[]>();
+        int[] itemCountArray = null;
+        for (Map.Entry<Integer, Integer> entry : wordMap_1.entrySet()) {
+            if (vectorSpace.containsKey(entry.getKey())) {
+                (vectorSpace.get(entry.getKey())[0]) += entry.getValue();
+            } else {
+                itemCountArray = new int[2];
+                itemCountArray[0] = entry.getValue();
+                itemCountArray[1] = 0;
+                vectorSpace.put(entry.getKey(), itemCountArray);
+            }
+
+        }
+
+        for (Map.Entry<Integer, Integer> entry : wordMap_2.entrySet()) {
+            if (vectorSpace.containsKey(entry.getKey())) {
+                (vectorSpace.get(entry.getKey())[1]) += entry.getValue();
+            } else {
+                itemCountArray = new int[2];
+                itemCountArray[0] = 0;
+                itemCountArray[1] = entry.getValue();
+                vectorSpace.put(entry.getKey(), itemCountArray);
+            }
+        }
+
+        double vector1Modulo = 0.00;//向量1的模
+        double vector2Modulo = 0.00;//向量2的模
+        double vectorProduct = 0.00; //向量积
+
+        for (Map.Entry<Integer, int[]> entry : vectorSpace.entrySet()) {
+            itemCountArray = entry.getValue();
+
+            vector1Modulo += itemCountArray[0] * itemCountArray[0];
+            vector2Modulo += itemCountArray[1] * itemCountArray[1];
+
+            vectorProduct += itemCountArray[0] * itemCountArray[1];
+        }
+
+        vector1Modulo = Math.sqrt(vector1Modulo);
+        vector2Modulo = Math.sqrt(vector2Modulo);
+
+        //返回相似度
+        return (vectorProduct / (vector1Modulo * vector2Modulo));
+
+    }
+
 
     public static boolean isChinese(char c) {
         return (c >= 0x4E00 && c <= 0x9FA5);

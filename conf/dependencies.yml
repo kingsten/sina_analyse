@@ -3,4 +3,5 @@
 require:
     - play
     - com.chenlb.mmseg4j -> mmseg4j-core 1.9.0
-    - com.chenlb.mmseg4j -> mmseg4j-analysis 1.9.0
+    - org.mongodb -> mongo-java-driver 2.10.1
+    - com.github.jmkgreen.morphia -> morphia 1.2.3

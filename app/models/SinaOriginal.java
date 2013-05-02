@@ -1,10 +1,10 @@
 package models;
 
 
-import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
-import com.google.code.morphia.annotations.PostLoad;
-import com.google.code.morphia.annotations.Transient;
+import com.github.jmkgreen.morphia.annotations.Entity;
+import com.github.jmkgreen.morphia.annotations.Id;
+import com.github.jmkgreen.morphia.annotations.PostLoad;
+import com.github.jmkgreen.morphia.annotations.Transient;
 import org.bson.types.ObjectId;
 import util.CommonUtil;
 

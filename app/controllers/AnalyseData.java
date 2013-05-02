@@ -18,4 +18,5 @@ public class AnalyseData extends Controller {
         renderJSON("success");
 
     }
+
 }

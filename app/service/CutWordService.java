@@ -1,13 +1,16 @@
 package service;
 
 import com.chenlb.mmseg4j.*;
+import com.mongodb.DBCollection;
+import models.SinaOriginal;
+import models.vo.WordsTable;
 import org.apache.commons.collections.MapUtils;
+import util.CommonUtil;
+import util.MongoDbUtil;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StringReader;
+import java.io.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,10 +22,11 @@ import java.util.Map;
  */
 public class CutWordService {
 
-    private String segStr(String text, String mode) throws IOException {
+    public String segStr(String text, String mode) throws IOException {
         String returnStr = "";
         Seg seg = null;
-        Dictionary dic = Dictionary.getInstance();
+//        Dictionary dic = Dictionary.getInstance();
+        Dictionary dic = Dictionary.getInstance(CommonUtil.getConfigureByKey("data.dir") + "/wordsNew.dic");
         if ("simple".equals(mode)) {
             seg = new SimpleSeg(dic);
         } else {
@@ -55,4 +59,22 @@ public class CutWordService {
         }
         return wordCountMap;
     }
+
+    public Map<Integer, Integer> wordIdCount(String[] wordArray) {
+        Map<Integer, Integer> wordIdCountMap = new HashMap<Integer, Integer>();
+        WordsTable wordsTable = WordsTable.getInstance();
+        for (String word : wordArray) {
+            Integer wordIndex = wordsTable.getWordsList().indexOf(word);
+            Integer count = MapUtils.getInteger(wordIdCountMap, wordIndex);
+            if (count == null) {
+                count = 1;
+            } else {
+                count++;
+            }
+            wordIdCountMap.put(wordIndex, count);
+        }
+        return wordIdCountMap;
+    }
+
+
 }

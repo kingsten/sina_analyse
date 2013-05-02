@@ -7,29 +7,32 @@
     <file path="$PROJECT_DIR$/app/views/errors/404.html" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363601196269" ignored="false" />
     <file path="$PROJECT_DIR$/app/views/errors/500.html" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363601196268" ignored="false" />
     <file path="$PROJECT_DIR$/app/views/Application/uploadData.html" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363601196268" ignored="false" />
-    <file path="/application.conf" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363610403509" ignored="false" />
+    <file path="/application.conf" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366785891989" ignored="false" />
     <file path="/ImportDataJob.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363603534985" ignored="false" />
     <file path="/ImportDataService.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366694792001" ignored="false" />
     <file path="/ImportData.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363605336840" ignored="false" />
-    <file path="/MongoDbUtil.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363610736165" ignored="false" />
+    <file path="/MongoDbUtil.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1367408980051" ignored="false" />
     <file path="/SinaOriginal.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1364212444275" ignored="false" />
-    <file path="/BIRCH.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366690644894" ignored="false" />
-    <file path="/CommonUtil.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363671377878" ignored="false" />
-    <file path="/CommonConstance.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363692738923" ignored="false" />
+    <file path="/BIRCH.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1367409163896" ignored="false" />
+    <file path="/CommonUtil.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366771418353" ignored="false" />
+    <file path="/CommonConstance.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366951133479" ignored="false" />
     <file path="/Main.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363687778016" ignored="false" />
     <file path="/LeafNode.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363692477971" ignored="false" />
     <file path="/ClusterFeature.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363691451564" ignored="false" />
     <file path="/TreeNode.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363691295788" ignored="false" />
     <file path="/a.dummy" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1363692615077" ignored="false" />
     <file path="$PROJECT_DIR$/test-result/application.log" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1364180683837" ignored="false" />
-    <file path="/AnalyseData.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1364212404590" ignored="false" />
+    <file path="/AnalyseData.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366951884336" ignored="false" />
     <file path="/AnalyseDataJob.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366690621411" ignored="false" />
     <file path="/NonLeafNode.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1364265559178" ignored="false" />
     <file path="/SinaInterim.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1364267057161" ignored="false" />
     <file path="/SinaInterimLeafNode.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366685435029" ignored="false" />
     <file path="/SinaInterimCluster.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366685832037" ignored="false" />
     <file path="/dependencies.yml" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366703660842" ignored="false" />
-    <file path="/CutWordService.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366718459826" ignored="false" />
+    <file path="/CutWordService.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366791782266" ignored="false" />
+    <file path="/Application.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366789046997" ignored="false" />
+    <file path="/DataService.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366791459797" ignored="false" />
+    <file path="/WordsTable.java" changelist="b18e5e1b-36be-4d35-8f4e-49f9b775b507" time="1366961280068" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -84,6 +86,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -93,23 +96,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BIRCH.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/vo/BIRCH.java">
+      <file leaf-file-name="MongoDbUtil.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/util/MongoDbUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="7" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+            <state line="4" column="23" selection-start="128" selection-end="128" vertical-scroll-proportion="0.026548672">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CutWordService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/service/CutWordService.java">
+      <file leaf-file-name="BIRCH.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/vo/BIRCH.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="7" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.7996661">
+            <state line="38" column="12" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1298#1315#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClusterFeature.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/vo/ClusterFeature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeafNode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/vo/LeafNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dependencies.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/dependencies.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="39" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SinaInterimLeafNode.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/SinaInterimLeafNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="6" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SinaOriginal.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/SinaOriginal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="11" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CutWordService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/service/CutWordService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="0" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/service/DataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImportDataService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/service/ImportDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="15" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,22 +204,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/vo/ClusterFeature.java" />
-        <option value="$PROJECT_DIR$/test/BasicTest.java" />
-        <option value="$PROJECT_DIR$/app/controllers/AnalyseData.java" />
-        <option value="$PROJECT_DIR$/app/models/SinaOriginal.java" />
-        <option value="$PROJECT_DIR$/app/models/vo/NonLeafNode.java" />
-        <option value="$PROJECT_DIR$/app/models/SinaInterim.java" />
-        <option value="$PROJECT_DIR$/app/models/SinaInterimLeafNode.java" />
-        <option value="$PROJECT_DIR$/app/models/SinaInterimCluster.java" />
-        <option value="$PROJECT_DIR$/app/job/AnalyseDataJob.java" />
-        <option value="$PROJECT_DIR$/app/service/ImportDataService.java" />
-        <option value="$PROJECT_DIR$/conf/application.conf" />
-        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
-        <option value="$PROJECT_DIR$/app/models/vo/BIRCH.java" />
-        <option value="$PROJECT_DIR$/app/util/CommonConstance.java" />
-        <option value="$PROJECT_DIR$/conf/dependencies.yml" />
         <option value="$PROJECT_DIR$/app/service/CutWordService.java" />
+        <option value="$PROJECT_DIR$/app/service/DataService.java" />
+        <option value="$PROJECT_DIR$/data/paperTerritory.dat" />
+        <option value="$PROJECT_DIR$/app/util/CommonUtil.java" />
+        <option value="$PROJECT_DIR$/app/util/CommonConstance.java" />
+        <option value="$PROJECT_DIR$/app/controllers/AnalyseData.java" />
+        <option value="$PROJECT_DIR$/app/models/vo/WordsTable.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Application.java" />
+        <option value="$PROJECT_DIR$/app/models/SinaInterim.java" />
+        <option value="$PROJECT_DIR$/app/models/SinaInterimCluster.java" />
+        <option value="$PROJECT_DIR$/app/models/SinaInterimLeafNode.java" />
+        <option value="$PROJECT_DIR$/app/models/SinaOriginal.java" />
+        <option value="$PROJECT_DIR$/app/service/ImportDataService.java" />
+        <option value="$PROJECT_DIR$/app/util/MongoDbUtil.java" />
+        <option value="$PROJECT_DIR$/app/models/vo/BIRCH.java" />
+        <option value="$PROJECT_DIR$/conf/dependencies.yml" />
       </list>
     </option>
   </component>
@@ -236,10 +316,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -290,6 +366,32 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sina_analyse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sina-analyse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -326,11 +428,16 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.BasicTest.aVeryImportantThingToTest">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CutWordService">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="service.Main" />
       <option name="VM_PARAMETERS" />
@@ -391,6 +498,22 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="CutWordService" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="service.CutWordService" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sina_analyse" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -403,6 +526,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -430,19 +566,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -479,16 +602,18 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BasicTest.aVeryImportantThingToTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.BasicTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CutWordService" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BasicTest.aVeryImportantThingToTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BasicTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.CutWordService" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BasicTest.aVeryImportantThingToTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BasicTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -532,15 +657,15 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2200957" sideWeight="0.087649405" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18007968" sideWeight="0.9983221" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5753846" sideWeight="0.99840635" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21673307" sideWeight="0.7799043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2769231" sideWeight="0.9067729" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -581,7 +706,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
@@ -609,116 +734,127 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/models/vo/MinCluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/vo/WordsTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="68" selection-start="4803" selection-end="4803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mongo-java-driver-2.11.0.jar!/com/mongodb/Mongo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="11" selection-start="1402" selection-end="1402" vertical-scroll-proportion="73.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/SinaInterim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="6" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/SinaInterimCluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/SinaInterimLeafNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/SinaOriginal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="846" selection-end="903" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="37" column="11" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AnalyseData.java">
+    <entry file="file://$PROJECT_DIR$/app/service/CutWordService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/job/AnalyseDataJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="78" column="0" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/service/ImportDataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0">
+        <state line="2" column="15" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/util/CommonUtil.java">
+    <entry file="file://$PROJECT_DIR$/app/service/DataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="15" column="13" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+    <entry file="jar://$PROJECT_DIR$/lib/mongo-java-driver-2.11.0.jar!/com/mongodb/DBAddress.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="0" selection-start="6945" selection-end="6945" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ImportData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="5" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/util/CommonConstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="50" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mmseg4j-core-1.9.0.jar!/data/words.dic">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8483" column="38" selection-start="36187" selection-end="36189" vertical-scroll-proportion="0.23356402">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/dependencies.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mmseg4j-core-1.9.0.jar!/com/chenlb/mmseg4j/example/Complex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mmseg4j-core-1.9.0.jar!/com/chenlb/mmseg4j/example/MaxWord.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="-3.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mmseg4j-core-1.9.0.jar!/com/chenlb/mmseg4j/example/Simple.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="169" selection-end="169" vertical-scroll-proportion="-3.0">
+        <state line="19" column="11" selection-start="769" selection-end="769" vertical-scroll-proportion="0.3611111">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/vo/BIRCH.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="7" selection-start="3746" selection-end="3746" vertical-scroll-proportion="0.0">
+        <state line="38" column="12" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/vo/ClusterFeature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/CutWordService.java">
+    <entry file="file://$PROJECT_DIR$/app/models/vo/LeafNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="7" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.7996661">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1298#1315#0" expanded="true" />
-          </folding>
+        <state line="13" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/dependencies.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="39" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/util/MongoDbUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="128" selection-end="128" vertical-scroll-proportion="0.026548672">
+          <folding />
         </state>
       </provider>
     </entry>

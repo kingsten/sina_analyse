@@ -1,6 +1,5 @@
 package service;
 
-import com.mongodb.MongoURI;
 import models.SinaOriginal;
 import org.apache.log4j.Logger;
 import util.MongoDbUtil;

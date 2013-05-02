@@ -1,7 +1,7 @@
 package models;
 
-import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
+import com.github.jmkgreen.morphia.annotations.Entity;
+import com.github.jmkgreen.morphia.annotations.Id;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
