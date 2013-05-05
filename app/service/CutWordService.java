@@ -86,7 +86,6 @@ public class CutWordService {
         WordsTable wordsTable = WordsTable.getInstance();
         for (String word : wordArray) {
             Integer wordIndex = wordsTable.getWordsList().indexOf(word);
-            System.out.println("index==================>" + wordIndex);
             Integer count = MapUtils.getInteger(wordIdCountMap, wordIndex);
             if (count == null) {
                 count = 1;
