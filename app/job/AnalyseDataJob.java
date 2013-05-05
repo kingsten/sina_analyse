@@ -1,12 +1,15 @@
 package job;
 
+import models.SinaUserTag;
 import models.vo.BIRCH;
 import models.vo.TreeNode;
 import models.vo.WordsTable;
+import netscape.security.UserTarget;
 import play.jobs.Job;
 import service.CutWordService;
 import service.DataService;
 import util.CommonConstance;
+import util.MongoDbUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -32,7 +35,11 @@ public class AnalyseDataJob extends Job {
             String[] wordArray = keywordString.split(" ");
             System.out.println("wordArray===============>" + wordArray);
             Map<Integer, Integer> sourceWordMap = CutWordService.getInstance(CommonConstance.cutWordModel).wordIdCount(wordArray);
-            List<String> userTag = WordsTable.getInstance().getClassification(sourceWordMap);
+            List<String> userTagList = WordsTable.getInstance().getClassification(sourceWordMap);
+            SinaUserTag sinaUserTag = new SinaUserTag();
+            sinaUserTag.setUserId(userId);
+            sinaUserTag.setUserTagList(userTagList);
+            MongoDbUtil.getDatastore().save(sinaUserTag);
         }
     }
 }
