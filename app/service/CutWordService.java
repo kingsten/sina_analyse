@@ -22,24 +22,45 @@ import java.util.Map;
  */
 public class CutWordService {
 
-    public String segStr(String text, String mode) throws IOException {
-        String returnStr = "";
-        Seg seg = null;
-//        Dictionary dic = Dictionary.getInstance();
+    public static CutWordService cutWordService = null;
+    MMSeg mmSeg = null;
+    Seg seg = null;
+
+    private CutWordService(String mode) {
         Dictionary dic = Dictionary.getInstance(CommonUtil.getConfigureByKey("data.dir") + "/wordsNew.dic");
         if ("simple".equals(mode)) {
             seg = new SimpleSeg(dic);
         } else {
             seg = new ComplexSeg(dic);
         }
+    }
 
-        // String words = seg.
+    public static CutWordService getInstance(String mode) {
+        if (cutWordService == null) {
+            cutWordService = new CutWordService(mode);
+        }
+        return cutWordService;
+    }
+
+    public String segStr(String text) {
+        String returnStr = "";
+//        Seg seg = null;
+//        Dictionary dic = Dictionary.getInstance(CommonUtil.getConfigureByKey("data.dir") + "/wordsNew.dic");
+//        if ("simple".equals(mode)) {
+//            seg = new SimpleSeg(dic);
+//        } else {
+//            seg = new ComplexSeg(dic);
+//        }
+
         StringReader reader = new StringReader(text);
-//        MMSeg mmSeg = new MMSeg(new InputStreamReader(new ByteArrayInputStream(text.getBytes())), seg);
         MMSeg mmSeg = new MMSeg(reader, seg);
         Word word = null;
-        while ((word = mmSeg.next()) != null) {
-            returnStr += word.getString() + " ";
+        try {
+            while ((word = mmSeg.next()) != null) {
+                returnStr += word.getString() + " ";
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 
         return returnStr;
@@ -65,11 +86,12 @@ public class CutWordService {
         WordsTable wordsTable = WordsTable.getInstance();
         for (String word : wordArray) {
             Integer wordIndex = wordsTable.getWordsList().indexOf(word);
+            System.out.println("index==================>" + wordIndex);
             Integer count = MapUtils.getInteger(wordIdCountMap, wordIndex);
             if (count == null) {
                 count = 1;
             } else {
-                count++;
+                ++count;
             }
             wordIdCountMap.put(wordIndex, count);
         }

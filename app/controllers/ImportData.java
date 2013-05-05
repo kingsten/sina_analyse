@@ -29,7 +29,6 @@ public class ImportData extends Controller {
 
         try {
             importDataJob.doJob();
-            System.out.println("do Job===================");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

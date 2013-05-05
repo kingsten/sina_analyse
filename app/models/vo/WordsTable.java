@@ -1,5 +1,6 @@
 package models.vo;
 
+import org.apache.commons.collections.MapUtils;
 import util.CommonConstance;
 import util.CommonUtil;
 
@@ -21,19 +22,46 @@ public class WordsTable {
 
     private List<String> paperTerritoryList;
 
+    private Map<String, Integer> categoryCount;
+
     private static WordsTable wordsTable;
 
     private WordsTable() {
 
         initWordList();
+        System.out.println("wordList===============>" + wordsList.toString());
         initWordsFrequency();
         initPaperTerritory();
+        initCategoryCount();
 
 
     }
 
+    private void initCategoryCount() {
+        File file = new File(CommonUtil.getConfigureByKey("data.dir") + "/paperTerritory.dat");
+        categoryCount = new HashMap<String, Integer>();
+        try {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String paper = null;
+            Integer count = 0;
+            while ((paper = bufferedReader.readLine()) != null) {
+                count = MapUtils.getInteger(categoryCount, paper);
+                if (count == null) {
+                    count = 1;
+                } else {
+                    ++count;
+                }
+                categoryCount.put(paper, count);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
+    }
+
     private void initPaperTerritory() {
-        File paperTerritoryFile = new File(CommonUtil.getConfigureByKey("data.dir") + "/paperTerritory");
+        File paperTerritoryFile = new File(CommonUtil.getConfigureByKey("data.dir") + "/paperTerritory.dat");
         paperTerritoryList = new ArrayList<String>();
         try {
             FileReader fileReader = new FileReader(paperTerritoryFile);
@@ -134,5 +162,37 @@ public class WordsTable {
         return distanceList;
     }
 
+    public List<String> getClassification(Map<Integer, Integer> sourceWordMap) {
+        List<String> classificationList = new ArrayList<String>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        String paper = null;
+        Integer count = null;
+        for (int i = 0; i < wordCountMatrix.size(); i++) {
+            Double similarity = CommonUtil.getSimilarity(sourceWordMap, wordCountMatrix.get(i));
+//            System.out.println("similarity============>" + similarity);
+            if (similarity > CommonConstance.similarity) {
+                paper = paperTerritoryList.get(i);
+                count = MapUtils.getInteger(map, paper);
+                if (count == null) {
+                    count = 0;
+                } else {
+                    ++count;
+                }
+                map.put(paper, count);
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            Integer paperCount = entry.getValue();
+            Integer paperAllCount = categoryCount.get(entry.getKey());
+            if (paperCount.doubleValue() / paperAllCount.doubleValue() >= 0.5) {
+                classificationList.add(entry.getKey());
+            }
+        }
+        return classificationList;
+    }
+
     //添加对应的对比代码，在已计算的 最近N个 文本中，对其类别进行计算统计，在把数量按照降序排序，选取合适的阈值进行打上标签
+
+
 }

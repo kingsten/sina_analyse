@@ -25,13 +25,11 @@ public class DataService {
         List<SinaOriginal> sinaOriginalList = MongoDbUtil.getDatastore().find(SinaOriginal.class).filter("userId", userId).asList();
         StringBuilder stringBuilder = new StringBuilder();
         for (SinaOriginal sinaOriginal : sinaOriginalList) {
-            stringBuilder.append(sinaOriginal.getContent()).append(" ");
+            stringBuilder.append(sinaOriginal.getContent());
         }
         return stringBuilder.toString();
 
     }
-
-
 
 
 }

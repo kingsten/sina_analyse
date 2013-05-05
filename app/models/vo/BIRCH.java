@@ -114,19 +114,10 @@ public class BIRCH {
         if (!root.getClass().getName().equals("models.vo.LeafNode")) {
             System.out.println(root.getClass().getName());
             NonLeafNode nonLeaf = (NonLeafNode) root;
-            System.out.println("size===============>" + nonLeaf.getChildrenList().size());
             for (TreeNode child : nonLeaf.getChildrenList()) {
                 storeTree(child);
             }
         } else {
-//            System.out.println("\n一个叶子节点:");
-//            LeafNode leaf = (LeafNode) root;
-//            for (MinCluster cluster : leaf.getChildrenList()) {
-//                System.out.println("\n一个最小簇:");
-//                for (String mark : cluster.getInst_marks()) {
-//                    System.out.print(mark + "\t");
-//                }
-//            }
             //存储一个簇的内容，加上一个节点进行标记
             LeafNode leafNode = (LeafNode) root;
             SinaInterimLeafNode sinaInterimLeafNode = new SinaInterimLeafNode();
@@ -136,10 +127,8 @@ public class BIRCH {
                 sinaInterimCluster.setClusterSize(cluster.getInst_marks().size());
                 sinaInterimCluster.setOriginalDataIdList(cluster.getInst_marks());
                 MongoDbUtil.getDatastore().save(sinaInterimCluster);
-                System.out.println("id============>" + sinaInterimCluster.getClusterId().toString());
                 sinaInterimLeafNode.getClusterIdList().add(sinaInterimCluster.getClusterId().toString());
             }
-            System.out.println("size of clust===================>" + sinaInterimLeafNode.getClusterIdList().size());
             MongoDbUtil.getDatastore().save(sinaInterimLeafNode);
         }
     }

@@ -31,7 +31,6 @@ public class ImportDataService extends Thread {
                 SinaOriginal sinaOriginal = new SinaOriginal();
                 if (items == null || items.length < 6)
                     continue;
-                System.out.println("before Save " + items[0]);
                 sinaOriginal.setMachineTime(new Date(Long.parseLong(items[0])));
                 sinaOriginal.setUserId(items[1]);
                 sinaOriginal.setPoi(items[2]);
