@@ -80,8 +80,6 @@ public class CommonUtil {
     public static Double getSimilarity(Map<Integer, Integer> wordMap_1, Map<Integer, Integer> wordMap_2) {
         Map<Integer, int[]> vectorSpace = new HashMap<Integer, int[]>();
         int[] itemCountArray = null;
-        System.out.println("wordMap_1=============>" + wordMap_1.size());
-        System.out.println("wordMap_2=============>" + wordMap_2.size());
         for (Map.Entry<Integer, Integer> entry : wordMap_1.entrySet()) {
             if (vectorSpace.containsKey(entry.getKey())) {
                 (vectorSpace.get(entry.getKey())[0]) += entry.getValue();

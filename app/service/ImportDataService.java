@@ -39,9 +39,7 @@ public class ImportDataService extends Thread {
                 sinaOriginal.setContent(items[5]);
                 MongoDbUtil.getDatastore().save(sinaOriginal);
                 number++;
-                if (number > 10000) {
-                    break;
-                }
+                System.out.println("save==========>" + number);
 
             }
         } catch (Exception e) {
@@ -58,14 +56,13 @@ public class ImportDataService extends Thread {
     }
 
     public static void initPoI() {
-        try{
+        try {
             File file = new File("");
 
-           BufferedReader bufferedReader = null;
+            BufferedReader bufferedReader = null;
 
 
-
-        }   catch (Exception e){
+        } catch (Exception e) {
             logger.error(e.getMessage());
         }
     }

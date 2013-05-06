@@ -40,7 +40,7 @@ public class WordsTable {
     }
 
     private void initStopWordList() {
-        File file = new File(CommonUtil.getConfigureByKey("data.dir") + "stopwords.dic");
+        File file = new File(CommonUtil.getConfigureByKey("data.dir") + "/stopwords.dic");
         stopWordList = new ArrayList<String>();
         try {
             FileReader fileReader = new FileReader(file);
@@ -169,11 +169,7 @@ public class WordsTable {
     public List<Map.Entry<Integer, Double>> getDistanceList(Map<Integer, Integer> sourceWordMap) {
         Map<Integer, Double> paperSimilarityMap = new HashMap<Integer, Double>();
         for (int i = 0; i < wordCountMatrix.size(); i++) {
-            Double similarity = CommonUtil.getSimilarity(sourceWordMap, wordCountMatrix.get(i));
-            if (similarity > CommonConstance.similarity) {
-                paperSimilarityMap.put(i, similarity);
-            }
-
+            paperSimilarityMap.put(i, CommonUtil.getSimilarity(sourceWordMap, wordCountMatrix.get(i)));
         }
         List<Map.Entry<Integer, Double>> distanceList = new ArrayList<Map.Entry<Integer, Double>>(paperSimilarityMap.entrySet());
         Collections.sort(distanceList, new Comparator<Map.Entry<Integer, Double>>() {
@@ -190,28 +186,42 @@ public class WordsTable {
         Map<String, Integer> map = new HashMap<String, Integer>();
         String paper = null;
         Integer count = null;
-        for (int i = 0; i < wordCountMatrix.size(); i++) {
-            Double similarity = CommonUtil.getSimilarity(sourceWordMap, wordCountMatrix.get(i));
-            //System.out.println("similarity============>" + similarity);
-            if (similarity > CommonConstance.similarity) {
-                paper = paperTerritoryList.get(i);
-                count = MapUtils.getInteger(map, paper);
-                if (count == null) {
-                    count = 0;
-                } else {
-                    ++count;
-                }
-                map.put(paper, count);
-            }
-        }
+//        for (int i = 0; i < wordCountMatrix.size(); i++) {
+//            Double similarity = CommonUtil.getSimilarity(sourceWordMap, wordCountMatrix.get(i));
+//            //System.out.println("similarity============>" + similarity);
+//            if (similarity > CommonConstance.similarity) {
+//                paper = paperTerritoryList.get(i);
+//                count = MapUtils.getInteger(map, paper);
+//                if (count == null) {
+//                    count = 0;
+//                } else {
+//                    ++count;
+//                }
+//                map.put(paper, count);
+//            }
+//        }
 
+        List<Map.Entry<Integer, Double>> distanceList = getDistanceList(sourceWordMap);
+        distanceList = distanceList.subList(0, distanceList.size() / 3);
+        System.out.println(distanceList.size());
+        for (Map.Entry<Integer, Double> entry : distanceList) {
+            paper = paperTerritoryList.get(entry.getKey());
+            count = MapUtils.getInteger(map, paper);
+            if (count == null) {
+                count = 0;
+            } else {
+                ++count;
+            }
+            map.put(paper, count);
+        }
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             Integer paperCount = entry.getValue();
             Integer paperAllCount = categoryCount.get(entry.getKey());
-            if (paperCount.doubleValue() / paperAllCount.doubleValue() >= 0.5) {
+            if (paperCount.doubleValue() / paperAllCount.doubleValue() >= 0.3) {
                 classificationList.add(entry.getKey());
             }
         }
+        System.out.println("classAZize==========>" + classificationList.size());
         return classificationList;
     }
 

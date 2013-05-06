@@ -34,7 +34,7 @@ public class AnalyseDataJob extends Job {
             String[] wordArray = keywordString.split(" ");
             Map<Integer, Integer> sourceWordMap = CutWordService.getInstance(CommonConstance.cutWordModel).wordIdCount(wordArray);
             List<String> userTagList = WordsTable.getInstance().getClassification(sourceWordMap);
-	    System.out.println("userTag List =================>"+userTagList.toString());
+            System.out.println("userTag List =================>" + userTagList.toString());
             SinaUserTag sinaUserTag = new SinaUserTag();
             sinaUserTag.setUserId(userId);
             sinaUserTag.setUserTagList(userTagList);
