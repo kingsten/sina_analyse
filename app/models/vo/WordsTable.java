@@ -24,6 +24,8 @@ public class WordsTable {
 
     private Map<String, Integer> categoryCount;
 
+    private List<String> stopWordList;
+
     private static WordsTable wordsTable;
 
     private WordsTable() {
@@ -32,8 +34,26 @@ public class WordsTable {
         initWordsFrequency();
         initPaperTerritory();
         initCategoryCount();
+        initStopWordList();
 
 
+    }
+
+    private void initStopWordList() {
+        File file = new File(CommonUtil.getConfigureByKey("data.dir") + "stopwords.dic");
+        stopWordList = new ArrayList<String>();
+        try {
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String wordLine = null;
+            while ((wordLine = bufferedReader.readLine()) != null) {
+                stopWordList.add(wordLine);
+            }
+            bufferedReader.close();
+            fileReader.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private void initCategoryCount() {
@@ -53,6 +73,8 @@ public class WordsTable {
                 }
                 categoryCount.put(paper, count);
             }
+            bufferedReader.close();
+            fileReader.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
 
@@ -119,6 +141,8 @@ public class WordsTable {
                 }
                 wordCountMatrix.add(wordIdCountMap);
             }
+            wordCountFileBufferReader.close();
+            wordCountFileBufferReader.close();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
@@ -191,7 +215,19 @@ public class WordsTable {
         return classificationList;
     }
 
-    //添加对应的对比代码，在已计算的 最近N个 文本中，对其类别进行计算统计，在把数量按照降序排序，选取合适的阈值进行打上标签
+    public List<String> getPaperTerritoryList() {
+        return paperTerritoryList;
+    }
 
+    public Map<String, Integer> getCategoryCount() {
+        return categoryCount;
+    }
 
+    public List<String> getStopWordList() {
+        return stopWordList;
+    }
+
+    public static WordsTable getWordsTable() {
+        return wordsTable;
+    }
 }

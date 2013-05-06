@@ -51,12 +51,15 @@ public class CutWordService {
 //        } else {
 //            seg = new ComplexSeg(dic);
 //        }
-
+        List<String> stopWordList = WordsTable.getInstance().getStopWordList();
         StringReader reader = new StringReader(text);
         MMSeg mmSeg = new MMSeg(reader, seg);
         Word word = null;
         try {
             while ((word = mmSeg.next()) != null) {
+                if (stopWordList.contains(word.getString())) {
+                    continue;
+                }
                 returnStr += word.getString() + " ";
             }
         } catch (Exception e) {
@@ -86,9 +89,9 @@ public class CutWordService {
         WordsTable wordsTable = WordsTable.getInstance();
         for (String word : wordArray) {
             Integer wordIndex = wordsTable.getWordsList().indexOf(word);
-	    if(wordIndex == -1){
-	    	continue;
-	    }
+            if (wordIndex == -1) {
+                continue;
+            }
             Integer count = MapUtils.getInteger(wordIdCountMap, wordIndex);
             if (count == null) {
                 count = 1;
