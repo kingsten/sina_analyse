@@ -2,16 +2,112 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title></title>
+    <title>Upload File</title>
+    <link rel="stylesheet" href="@{'/public/bootstrap/css/bootstrap.min.css'}">
+    <script type="text/javascript" src="@{'/public/javascripts/jquery.js'}"></script>
+    <script type="text/javascript" src="@{'/public/javascripts/jquery.form.js'}"></script>
+    <script type="text/javascript" src="@{'/public/bootstrap/js/bootstrap.min.js'}"></script>
 </head>
 <body>
 
-<form action="@{ImportData.importData()}" method="post" enctype="multipart/form-data">
-
-    <input type="file" name="sinaOriginalFile"/>
-    <input type="submit" value="upload"/>
+<form id="fileForm" action="/ImportData/importData" method="POST"
+      enctype="multipart/form-data">
+    <input type="file" name="sinaOriginalFile" class="fileInput" id="fileInput"/>
+    <input type="text" id="fileName" style="margin-top:10px"/>
+    <input type="button" value="浏览" class="btn">
+    <button type="submit" class="btn btn-primary" id = "uploadLoadButton" style="margin-left: 5px;">
+        <span>上传</span>
+    </button>
+    <button type="submit" class="btn" disabled="true" id="analyseButton" onclick="analyseData()" style="margin-left: 5px;">
+        <span>开始分析数据</span>
+    </button>
+    <div id="uploadBar"></div>
 
 </form>
 
+<style>
+    body {
+        text-align: center;
+    }
+
+    .fileInputContainer {
+        height: 30px;
+        background: url("@{'/public/images/fileupload.png'}") fixed no-repeat;
+        position: relative;
+        width: 30px;
+        margin-right: 3px;
+        display: inline-block;
+    }
+
+    .fileInput {
+        height: 30px;
+        overflow: hidden;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        right: 550px;
+        width: 30px;
+        cursor: pointer;
+        filter: alpha(opacity:0);
+        opacity: 0;
+    }
+</style>
+<script>
+
+    $(document).ready(function () {
+        $("#fileForm").ajaxForm({
+                    dataType: "json",
+                    resetForm: true,
+                    beforeSubmit: function () {
+                        if ($("#fileInput").val() == "") {
+//                            $("#uploadBar").html("<span class='error' style='display:inline;'><em>请先选择要上传的文件</em></span>");
+                            alert("请先选择要上传的文件");
+                            return false;
+                        }
+                        $("#uploadBar").html("正在上传……");
+                    },
+
+                    success: function (data) {
+                        if (data.success) {
+                            $("#uploadBar").html("<span class='error' style='display:inline;'><em>上传成功!</em></span>");
+                            $("#analyseButton").isDisabled = false;
+                        } else {
+                            $("#uploadBar").html("<span class='error' style='display:inline;'><em>" + data.message + "</em></span>");
+                        }
+                    },
+                    error: function () {
+                        $("#uploadBar").html("<span class='error' style='display:inline;'><em>上传失败</em></span>");
+                    }
+                }
+        );
+
+        $("#fileInput").change(function () {
+            $("#fileName").val($(this).val());
+        });
+        $("#fileInput").each(function () {
+            if ($(this).val() == "") {
+                $("#fileName").val("未选择文件....");
+            }
+        });
+
+
+    });
+
+    function analyseData(){
+               var options = {
+                   url: "/AnalyseData/analyseUserData",
+                   global: true,
+                   success: function (msg) {
+                       if (msg.success) {
+                             alert("数据已分析完成，请在查询页面进行结果查询！");
+                           }
+                       }
+                   };
+
+               $.ajax(options);
+    }
+
+
+</script>
 </body>
 </html>

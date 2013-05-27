@@ -21,7 +21,7 @@ public class SinaUserTag {
 
     private String userId;
 
-    private List<String> userTagList;
+    private String userTagStr;
 
     public ObjectId getId() {
         return id;
@@ -35,11 +35,19 @@ public class SinaUserTag {
         this.userId = userId;
     }
 
-    public List<String> getUserTagList() {
-        return userTagList;
+    public String getUserTagStr() {
+        return userTagStr;
     }
 
-    public void setUserTagList(List<String> userTagList) {
-        this.userTagList = userTagList;
+    public void setUserTagStr(String userTagStr) {
+        this.userTagStr = userTagStr;
+    }
+
+    @Override
+    public String toString() {
+        return "SinaUserTag{" +
+                "userId='" + userId + '\'' +
+                ", userTagStr='" + userTagStr + '\'' +
+                '}';
     }
 }

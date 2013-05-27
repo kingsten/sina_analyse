@@ -2,8 +2,8 @@ package job;
 
 import models.SinaUserTag;
 import models.vo.BIRCH;
-import models.vo.TreeNode;
 import models.vo.WordsTable;
+import org.apache.commons.lang.StringUtils;
 import play.jobs.Job;
 import service.CutWordService;
 import service.DataService;
@@ -34,10 +34,9 @@ public class AnalyseDataJob extends Job {
             String[] wordArray = keywordString.split(" ");
             Map<Integer, Integer> sourceWordMap = CutWordService.getInstance(CommonConstance.cutWordModel).wordIdCount(wordArray);
             List<String> userTagList = WordsTable.getInstance().getClassification(sourceWordMap);
-            System.out.println("userTag List =================>" + userTagList.toString());
             SinaUserTag sinaUserTag = new SinaUserTag();
             sinaUserTag.setUserId(userId);
-            sinaUserTag.setUserTagList(userTagList);
+            sinaUserTag.setUserTagStr(StringUtils.join(userTagList, ";"));
             MongoDbUtil.getDatastore().save(sinaUserTag);
         }
     }

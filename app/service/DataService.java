@@ -2,9 +2,15 @@ package service;
 
 import com.mongodb.DBCollection;
 import models.SinaOriginal;
+import models.SinaUserTag;
+import models.vo.WordsTable;
+import org.apache.commons.lang.StringUtils;
+import sun.swing.StringUIClientPropertyKey;
+import util.CommonConstance;
 import util.MongoDbUtil;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,6 +36,17 @@ public class DataService {
         return stringBuilder.toString();
 
     }
+
+    public static List<SinaUserTag> getUsersByUserId(String userId, Integer curPage, Integer perPage) {
+        List<SinaUserTag> sinaUserTagList = MongoDbUtil.getDatastore().find(SinaUserTag.class).filter("userId", Pattern.compile(".*" + userId + ".*",Pattern.CASE_INSENSITIVE)).offset((curPage - 1) * perPage).limit(perPage).asList();
+        return sinaUserTagList;
+    }
+
+    public static List<SinaUserTag> getUserListByTag(String tag, Integer curPage, Integer perPage) {
+        List<SinaUserTag> sinaUserTagList = MongoDbUtil.getDatastore().find(SinaUserTag.class).filter("userTagStr", Pattern.compile(".*" + tag + ".*",Pattern.CASE_INSENSITIVE)).offset((curPage - 1) * perPage).limit(perPage).asList();
+        return sinaUserTagList;
+    }
+
 
 
 }

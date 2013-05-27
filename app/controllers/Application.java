@@ -14,7 +14,8 @@ public class Application extends Controller {
     public static void index() {
 
 
-        renderTemplate("/Application/uploadData.html");
+//        renderTemplate("/Application/uploadData.html");
+        renderTemplate("/Application/sina_index.html");
     }
 
 

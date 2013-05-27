@@ -1,6 +1,7 @@
 package controllers;
 
 import job.AnalyseDataJob;
+import models.vo.ReturnData;
 import play.mvc.Controller;
 
 /**
@@ -15,7 +16,7 @@ public class AnalyseData extends Controller {
     public static void analyseUserData() {
         AnalyseDataJob analyseData = new AnalyseDataJob();
         analyseData.doJob();
-        renderJSON("success");
+        renderJSON(new ReturnData(null, true, "ok"));
 
     }
 

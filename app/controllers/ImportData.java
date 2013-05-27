@@ -1,6 +1,7 @@
 package controllers;
 
 import job.ImportDataJob;
+import models.vo.ReturnData;
 import play.libs.Files;
 import play.mvc.Controller;
 import service.ImportDataService;
@@ -13,6 +14,10 @@ import java.io.File;
  * this template use File | Settings | File Templates.
  */
 public class ImportData extends Controller {
+
+    public static void index(){
+        renderTemplate("/Application/uploadData.html");
+    }
 
 
     public static void importData(File sinaOriginalFile) {
@@ -33,7 +38,8 @@ public class ImportData extends Controller {
             System.out.println(e.getMessage());
         }
 
-        renderText("success");
+        renderJSON(new ReturnData(null, true, "success"));
 
     }
+
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="@{'/public/bootstrap/css/bootstrap.css'}">
+    <script type="text/javascript" src="@{'/public/bootstrap/js/bootstrap.js'}"></script>
+    <title></title>
+</head>
+<body style="text-align: center">
+*{<div class="nav-tabs">}*
+*{<a href="/ImportData/index" target="frameContent"> <button class="btn" style="margin-right: 30px;">上传数据文件</button></a>}*
+*{<a href="/Search/index" target="frameContent"> <button class="btn" style="margin-left: 30px;">分析结果查询</button></a>}*
+*{</div>}*
+*{<div>}*
+*{<ul class="nav nav-tabs">}*
+*{<li  id="uploadLi" class="active">}*
+*{<a href="/ImportData/index" target="frameContent" >上传数据文件</a>}*
+*{</li>}*
+*{<li id="searchLi" >}*
+*{<a href="/Search/index" target="frameContent" >分析结果查询</a>}*
+*{</li>}*
+*{</ul>}*
+*{</div>}*
+
+<div class="navbar">
+    <div class="navbar-inner">
+        <ul class="nav">
+            <li class="active" id="uploadLi"><a href="/ImportData/index" target="frameContent"
+                                                onclick="linkOnClick('uploadLi')">上传数据文件</a></li>
+            <li id="searchLi"><a href="/Search/index" target="frameContent" onclick="linkOnClick('searchLi')">分析结果查询</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <iframe name="frameContent" src="/ImportData/index"
+            style="width:100%;height: 700px;border: 0;margin-top: 20px"></iframe>
+</div>
+
+<script type="text/javascript">
+    function linkOnClick(liId) {
+        if (liId == "uploadLi") {
+            document.getElementById("uploadLi").className = "active";
+            document.getElementById("searchLi").className = "";
+        } else {
+            document.getElementById("searchLi").className = "active";
+            document.getElementById("uploadLi").className = "";
+        }
+    }
+</script>
+
+</body>
+</html>
