@@ -221,7 +221,6 @@ public class WordsTable {
                 classificationList.add(entry.getKey());
             }
         }
-        System.out.println("classAZize==========>" + classificationList.size());
         return classificationList;
     }
 

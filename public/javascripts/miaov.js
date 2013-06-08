@@ -80,11 +80,11 @@ function OnLoadFunction(divId) {
 }
 
 
-window.onload=function ()
-{
-	loadSystemTag();
-    loadTableByUserId("", 1, 6);
-};
+//window.onload=function ()
+//{
+//	loadSystemTag();
+//    loadTableByUserId("", 1, 6);
+//};
 
 function update() {
     var a;

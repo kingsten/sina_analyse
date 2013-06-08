@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="@{'/public/stylesheets/miaov_style.css'}" type="text/css">
     <script src="@{'/public/javascripts/miaov.js'}" type="text/javascript"></script>
     <script src="@{'/public/javascripts/jquery-1.7.2.min.js'}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadSystemTag();
+            loadTableByUserId("", 1, 6);
+        });
+    </script>
 </head>
 <body>
 
@@ -14,17 +20,18 @@
 <div style="float: left;text-align: center">
     <div style="width: 500px;height: 600px;float: left;margin-top: 30px">
         <label id="tagLabel"><b>系统标签</b></label>
+
         <div id="bollDiv" style="float: left">
         </div>
     </div>
 
 
     <div style="width: 700px;height: 600px;float: left;vertical-align: text-top;text-align: center;margin-top: 30px">
-            <input id="token" type="text" class="search-query"
-                   onblur="if(this.value==''){this.value=this.defaultValue;}"
-                   onfocus="if(this.value==this.defaultValue)this.value='';"
-                   value="搜索请输入用户ID关键字">
-            <button class="btn" onclick="searchButtonClick()">查询</button>
+        <input id="token" type="text" class="search-query"
+               onblur="if(this.value==''){this.value=this.defaultValue;}"
+               onfocus="if(this.value==this.defaultValue)this.value='';"
+               value="搜索请输入用户ID关键字">
+        <button class="btn" onclick="searchButtonClick()">查询</button>
         <div id="tableDiv" style="margin-top: 40px;margin-left: 60px;height: 500px">
         </div>
         <div id="pageContent" style="horizontal-align:text-top;width: 700px;">
